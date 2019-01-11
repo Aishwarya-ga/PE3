@@ -1,4 +1,4 @@
-package com.pe3;
+package com.stackroute.pe3;
 
 import org.junit.After;
 import org.junit.Before;
@@ -33,5 +33,4 @@ public class ToRemoveVowelsInWordsTest {
         String[] actual = toRemoveVowelsInWords.RemoveVowelsInwords(input);
         assertArrayEquals(expected,actual);
     }
-
 }

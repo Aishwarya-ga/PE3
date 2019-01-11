@@ -1,4 +1,4 @@
-package com.pe3;
+package com.stackroute.pe3;
 
 import org.junit.After;
 import org.junit.Before;

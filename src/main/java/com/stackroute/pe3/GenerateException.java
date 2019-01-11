@@ -1,9 +1,14 @@
-package com.pe3;
+/*Write a program that will generate exceptions of type NegativeArraySizeException,
+* IndexOutOfBoundsException, NullPointerException. Record the catching of each exception
+* by displaying the message stored in the exception object.
+*/
+package com.stackroute.pe3;
 
 public class GenerateException {
     public int x=10;
-
-    //Negative Array size exception
+    /*
+    method to generate Negative Array size exception
+     */
     public static void generateNegativeArraySizeException()
     {
         int arraySize = -8;
@@ -15,8 +20,9 @@ public class GenerateException {
             System.out.println("Array size cannot be negative");
         }
     }
-
-    //IndexOutOfBound exception
+    /*
+    method to generate IndexOutOfBound exception
+     */
     public static  void generateIndexOutOfBoundsException()
     {
         int array[]=new int[5];
@@ -28,19 +34,16 @@ public class GenerateException {
             System.out.println("Array Index out of bound");
         }
     }
-
-    //NullPointer exception
+    /*
+    method to generate NullPointer exception
+     */
     private static GenerateException nullPointer() {
         return null;
     }
-
     public static void main(String[] args) {
-
         generateNegativeArraySizeException();
         generateIndexOutOfBoundsException();
-
         GenerateException  generateException = nullPointer();
-
         try {
             int i = generateException.x;
         }
@@ -49,6 +52,5 @@ public class GenerateException {
             System.out.println(e);
             System.out.println("Nullpointer Exception");
         }
-
     }
 }
