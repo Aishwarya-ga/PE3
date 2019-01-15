@@ -5,13 +5,13 @@
 package com.stackroute.pe3;
 
 public class GenerateException {
-    public int x=10;
+    public int input = 10;
     /*
     method to generate Negative Array size exception
      */
-    public static void generateNegativeArraySizeException()
+    public void generateNegativeArraySizeException()
     {
-        int arraySize = -8;
+        int arraySize = -1;
         try {
             int[] array = new int[arraySize];
         }
@@ -23,7 +23,7 @@ public class GenerateException {
     /*
     method to generate IndexOutOfBound exception
      */
-    public static  void generateIndexOutOfBoundsException()
+    public void generateIndexOutOfBoundsException()
     {
         int array[]=new int[5];
         try{
@@ -37,20 +37,7 @@ public class GenerateException {
     /*
     method to generate NullPointer exception
      */
-    private static GenerateException nullPointer() {
+    private GenerateException nullPointer() {
         return null;
-    }
-    public static void main(String[] args) {
-        generateNegativeArraySizeException();
-        generateIndexOutOfBoundsException();
-        GenerateException  generateException = nullPointer();
-        try {
-            int i = generateException.x;
-        }
-        catch(NullPointerException e)
-        {
-            System.out.println(e);
-            System.out.println("Nullpointer Exception");
-        }
     }
 }

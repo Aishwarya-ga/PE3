@@ -27,7 +27,7 @@ public class CalculateFirstAndLastOfWeek {
             sunday = sunday.plusDays(1);
         }
         System.out.println("Today: " + today);
-        System.out.println("Monday date this week" + monday);
-        System.out.println("Sunday date this week" + sunday);
+        System.out.println("Monday date this week " + monday);
+        System.out.println("Sunday date this week " + sunday);
     }
 }

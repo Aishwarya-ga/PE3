@@ -17,47 +17,46 @@ public class ToCreateChessBoardPattern {
     /*
     method to print chessboard pattern
      */
-    public String[] CreateChessBoardPattern(){
-        String[] array = new String[8];
-        String string = "";
-        for (int i = 0; i < 8; i++) {
-            if (i % 2 == 0) {
-                for (int j = 0; j < 8; j++) {
-                    if (j % 2 == 0) {
-                        string += "WW";
-                        string += "|";
+    public String[] CreateChessBoardPattern(int number) {
+        String[] arr = new String[0];
+        if (number == 8) {
+            String[] array = new String[8];
+            String string = "";
+            for (int i = 0; i < number; i++) {
+                if (i % 2 == 0) {
+                    for (int j = 0; j < number; j++) {
+                        if (j % 2 == 0) {
+                            string += "WW";
+                            string += "|";
+                        } else {
+                            string += "BB";
+                            string += "|";
+                        }
                     }
-                    else{
-                        string += "BB";
-                        string += "|";
+                    array[i] = string;
+                    string = "";
+                } else {
+                    for (int j = 0; j < number; j++) {
+                        if (j % 2 == 0) {
+                            string += "BB";
+                            string += "|";
+                        } else {
+                            string += "WW";
+                            string += "|";
+                        }
                     }
+                    array[i] = string;
+                    string = "";
                 }
-                array[i] = string;
-                string = "";
             }
-            else {
-                for (int j = 0; j < 8; j++) {
-                    if (j % 2 == 0) {
-                        string += "BB";
-                        string += "|";
-                    }
-                    else {
-                        string += "WW";
-                        string += "|";
-                    }
-                }
-                array[i] = string;
-                string = "";
-            }
-
-
+            return array;
         }
-      return array;
+        return null;
     }
     public static void main(String[] args) {
         ToCreateChessBoardPattern toCreateChessBoardPattern = new ToCreateChessBoardPattern();
         String[] str;
-        str = toCreateChessBoardPattern.CreateChessBoardPattern();
+        str = toCreateChessBoardPattern.CreateChessBoardPattern(8);
         for (int i = 0; i < str.length; i++) {
             System.out.println(str[i]);
         }

@@ -17,7 +17,7 @@ public class ToRemoveVowelsInWordsTest {
     public void tearDown() throws Exception {
         toRemoveVowelsInWords = null;
     }
-
+    /* method to test success */
     @Test
     public void removeVowelsInwordsSuccess() {
        String[] expected = {"Ind","Untd Stts","Grmny","Egypt","czchslvk"};
@@ -25,7 +25,7 @@ public class ToRemoveVowelsInWordsTest {
        String[] actual = toRemoveVowelsInWords.RemoveVowelsInwords(input);
        assertArrayEquals(expected,actual);
     }
-
+    /* method to test failure */
     @Test
     public void setToRemoveVowelsInWordsFailure(){
         String[] expected = null;

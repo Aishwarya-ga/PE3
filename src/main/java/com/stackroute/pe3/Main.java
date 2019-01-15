@@ -7,7 +7,7 @@ package com.stackroute.pe3;
 
 public class Main {
     Main(String message) {
-        message="Hello world";
+        message = "Hello world";
         System.out.println(message);
     }
 

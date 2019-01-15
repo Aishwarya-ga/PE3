@@ -17,7 +17,7 @@ public class ComputeAdditionOfMatrixTest {
     public void tearDown() throws Exception {
         computeAdditionOfMatrix = null;
     }
-
+    /* method to test success */
     @Test
     public void testAdditionOfMatrixSuccess3X2() {
         int[][] input1 = {{1,2},
@@ -41,6 +41,7 @@ public class ComputeAdditionOfMatrixTest {
 
 
     }
+    /* method to test success */
     @Test
     public void testAdditionOfMatrixSuccess4X2() {
         int[][] input1 = {{1, 2},
@@ -61,7 +62,7 @@ public class ComputeAdditionOfMatrixTest {
         //assert
         assertArrayEquals(expectedValue2, actaualValue2);
     }
-
+    /* method to test failure */
     @Test
     public void testAdditionOfMatrixFailureForRowColum(){
         int[][] input1 = {{1,2},
@@ -82,6 +83,7 @@ public class ComputeAdditionOfMatrixTest {
         assertArrayEquals(expectedValue,actaualValue);
 
     }
+    /* method to test failure */
     @Test
     public void testAdditionOfMatrixFailureForInputEmpty(){
         int[][] input1 = {};
@@ -95,6 +97,7 @@ public class ComputeAdditionOfMatrixTest {
         assertArrayEquals(expectedValue,actualValue);
 
     }
+    /* method to test failure */
     @Test
     public void testAdditionOfMatrixFailureForInputNotEqual(){
         int[][] input1 = {{1,1},{2,3}};

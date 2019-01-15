@@ -20,16 +20,17 @@ public class StudentMarksTest {
     public void tearDown() throws Exception {
         inputStream.close();
     }
-
+    /* method to test success */
     @Test
-    public void getNumOfStudents() {
+    public void getNumOfStudentSuccesss() {
         String INPUT = "4 11 12 13 14";
         inputStream = new ByteArrayInputStream(INPUT.getBytes());
         System.setIn(inputStream);
         assertEquals("Success",studentMarks.getNumOfStudents());
     }
+    /* method to test failure */
     @Test
-    public void  testFailure(){
+    public void  getNumOfStudentFailure(){
         String INPUT = "4 11 120 13 14";
         inputStream = new ByteArrayInputStream(INPUT.getBytes());
         System.setIn(inputStream);

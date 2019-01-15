@@ -17,7 +17,7 @@ public class ToCheckSeriesOfConsecutiveNoTest {
     public void tearDown() throws Exception {
         toCheckSeriesOfConsecutiveNo = null;
     }
-
+    /* method to test success */
     @Test
     public void toCheckSeriesOfConsecutiveNumbersSuccess() {
         boolean expected = true;
@@ -26,6 +26,7 @@ public class ToCheckSeriesOfConsecutiveNoTest {
         assertEquals(expected,actual);
 
     }
+    /* method to test failure */
     @Test
     public void setToCheckSeriesOfConsecutiveNoFailure(){
         boolean expected = false;
@@ -33,6 +34,7 @@ public class ToCheckSeriesOfConsecutiveNoTest {
         boolean actual = toCheckSeriesOfConsecutiveNo.toCheckSeriesOfConsecutiveNumbers(array,4);
         assertEquals(expected,actual);
     }
+    /* method to test invalid input */
     @Test
     public void setToCheckSeriesOfConsecutiveNoInputFailure() {
         boolean expected = false;
@@ -40,6 +42,7 @@ public class ToCheckSeriesOfConsecutiveNoTest {
         boolean actual = toCheckSeriesOfConsecutiveNo.toCheckSeriesOfConsecutiveNumbers(array, 0);
         assertNotEquals(expected, actual);
     }
+    /* method to test empty input */
     @Test
     public void setToCheckSeriesOfConsecutiveNoEmptyInput() {
         boolean expected = false;
@@ -48,6 +51,7 @@ public class ToCheckSeriesOfConsecutiveNoTest {
         assertEquals(expected, actual);
 
     }
+    /* method to test success for same numbers */
     @Test
     public void setToCheckSeriesOfConsecutiveNoSuccessForSameNumbers(){
         boolean expected = true;
@@ -55,6 +59,7 @@ public class ToCheckSeriesOfConsecutiveNoTest {
         boolean actual = toCheckSeriesOfConsecutiveNo.toCheckSeriesOfConsecutiveNumbers(array,4);
         assertNotEquals(expected,actual);
     }
+    /* method to test failure for special character */
     @Test
     public void setToCheckSeriesOfConsecutiveNoFailureForSpecialCharacter(){
         boolean expected = false;
@@ -62,6 +67,7 @@ public class ToCheckSeriesOfConsecutiveNoTest {
         boolean actual = toCheckSeriesOfConsecutiveNo.toCheckSeriesOfConsecutiveNumbers(array,4);
         assertEquals(expected,actual);
     }
+    /* method to test Success for two numbers */
     @Test
     public void setToCheckSeriesOfConsecutiveNoSuccessForTwoSameNumbers(){
         boolean expected = false;
